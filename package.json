@@ -1,0 +1,10 @@
+{
+  "name"          : "MogaoCaves",
+  "version"       : "0.0.0",
+  "description"   : "Mogao Caves: An ancient Buddhist treasure.",
+  "main"          : "server.js",
+  "author"        : "George Ruan",
+  "dependencies"  : {
+    "express"         : "~4.7.2"
+  }
+}
