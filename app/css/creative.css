@@ -472,6 +472,11 @@ img::-moz-selection {
     background: 0 0;
 }
 
+video {
+  width: 700px;
+  max-width: 100%;
+}
+
 body {
     webkit-tap-highlight-color: #222;
 }
