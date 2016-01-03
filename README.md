@@ -1,11 +1,11 @@
 # Dunhuang Caves
 This website encompasses all the work done on the caves.
 
-It's main purpose is to showcase our work to the outside world, be it Harvard
-or the Dunhuang Research Academy
+It's main purpose is to showcase our work to the outside world, including
+Harvard and the Dunhuang Research Academy.
 
 ## Developing Locally
-The project may be cloned at git@github.com:gruan/MogaoCaves.git
+The project may be cloned at [git@github.com:gruan/MogaoCaves.git]
 
 ### Required Software
 - npm
