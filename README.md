@@ -12,8 +12,6 @@ The project may be cloned at [git@github.com:gruan/MogaoCaves.git](git@github.co
 - nodemon
 
 ### Testing Locally
-Follow these instructions.
-
 1. Navigate to the directory with server.js.
 2. `# npm install`
 3. `# nodemon server.js`
@@ -22,19 +20,15 @@ Follow these instructions.
 This section details the process in setting up the server.
 
 ### Setup From Scratch
-#### Droplet Configuration
-Deploy an Ubuntu droplet with NodeJS pre-installed.
-
-Then follow these instructions in bash:
-- Login as root. Use the password from the e-mail.
+#### Droplet Configuration Instructions
+Before beginning, deploy an Ubuntu droplet with NodeJS pre-installed.
+- **Login As Root**  
+Use the password from the e-mail.  
 `# ssh root@SERVER_IP_ADDRESS`
-- Create a new user.
-`# adduser NEW_USER`
-- Add the new user to the sudo group for root privileges
-`# gpasswd -a NEW_USER sudo`
-- (Optional) Add Public Key Authentication
-  - Generate a Key Pair (Skip if you already have one).
-`local$ ssh-keygen`
+- `# adduser NEW_USER` **Create A New User.**
+- `# gpasswd -a NEW_USER sudo` **Add Root Privileges.** Add the user to the sudo group.
+- `local$ ssh-copy-id NEW_USER@SERVER_IP_ADDRESS` **(Optional) Add Public Key Authentication.** Install ssh-copy-id if necessary.
+-
 
 
 
