@@ -146,21 +146,28 @@ Access the FTP service using FileZilla or the command line.
 ### Migrate Large Files with FTP
 The following need to be migrated. The list may be incomplete, so update it
 if there is an item that is missing or no longer needed.
+```
 - PROJDIR/app/video/
+```
 
 ### Deploying the Server
 ##### Install forever
 ```
-$ npm install -g forever
+$ sudo npm install -g forever
 ```
 ##### Boot Up the Server!
+Before deploying, change the port from 8080 to 80 in `server.js`
+```
+$ vim server.js
+// change var port = 8080 to var port = 80
+```
 To deploy the server, run the following in the project directory:
 ```
-$ forever start server.js
+$ sudo forever start server.js
 ```
 To stop the server, run:
 ```
-$ forever stopall
+$ sudo forever stopall
 ```
 
 ### Domain Name Service Setup
