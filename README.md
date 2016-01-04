@@ -12,9 +12,11 @@ The project may be cloned at [git@github.com:gruan/MogaoCaves.git](git@github.co
 - nodemon
 
 ### Testing Locally
-1. Navigate to the directory with server.js.
-2. `# npm install`
-3. `# nodemon server.js`
+Navigate to the directory with server.js and run
+```
+$ npm install
+$ nodemon server.js
+```
 
 ## Server Setup
 This section details the process in setting up the server.
@@ -100,11 +102,54 @@ Install the repository's node modules
 ```
 $ npm install
 ```
-For testing purposes, install nodemon
+
+### Setting Up FTP
+Due to the size of certain files, they are not hosted on Github and must
+be transferred using FTP.
+
+##### Install A FTP Service
+In the following, we use vsftpd as our FTP service.
 ```
-$ sudo npm install -g nodemon
+sudo apt-get install vsftpd
 ```
 
+##### Configure vsftpd
+By default, vsftpd allows access as anonymous users.
+Open the configuration file:
+```
+$ sudo vim /etc/vsftpd.conf
+```
+Then change the following
+```
+anonymous_enable=NO   // Previously anonymous_enable=YES
+```
+We also want to change a couple other default configurations
+```
+// Uncomment the following
+local_enable=YES
+...
+write_enable=YES
+...
+chroot_local_user=YES
+```
+
+##### Create a Directory For FTP Usage
+Create a new directory in the home directory
+```
+$ mkdir ~/files
+```
+Change the ownership of that file to root
+```
+$ sudo chown root:root ~/files
+```
+
+##### Reload vsftpd
+```
+$ sudo service vsftpd restart
+```
+
+### Accessing FTP
+Before beginning, install **FileZilla**.
 
 
 ### Domain Name Service Setup
