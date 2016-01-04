@@ -32,14 +32,39 @@ Using the password from the e-mail.
 # adduser NEW_USER
 ```
 ##### Add Root Privileges
-Add the user to the sudo group.  
-`# gpasswd -a NEW_USER sudo`  
+Add the user to the sudo group.
+```
+# gpasswd -a NEW_USER sudo
+```
 ##### (Optional) Add Public Key Authentication.
 Install ssh-copy-id if necessary.  
-`local$ ssh-copy-id NEW_USER@SERVER_IP_ADDRESS`  
+```
+local$ ssh-copy-id NEW_USER@SERVER_IP_ADDRESS
+```  
 ##### Configure SSH Daemon
-Open the configuration file located here  
-`/etc/ssh/sshd_config`  
+Open the configuration file located here:
+```
+# vim /etc/ssh/sshd_config
+```
+Change `PermitRootLogin` from yes to no:
+```
+PermitRootLogin no    // Previously was 'PermitRootLogin yes'
+```
+Save and close the configuration file.
+
+##### Reload SSH
+Restart the SSH service:
+```
+# service ssh restart
+```
+Before logging out from the droplet, test that NEW_USER is correctly setup and
+has root privileges.
+```
+local$ ssh NEW_USER@SERVER_IP_ADDRESS
+$ sudo echo cats
+```
+Logout from the root account.
+
 
 
 
