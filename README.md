@@ -22,13 +22,18 @@ This section details the process in setting up the server.
 ### Setup From Scratch
 #### Droplet Configuration Instructions
 Before beginning, deploy an Ubuntu droplet with NodeJS pre-installed.
-- **Login As Root**  
-Use the password from the e-mail.  
+1. **Login As Root**  
+Using the password from the e-mail.  
 `# ssh root@SERVER_IP_ADDRESS`
-- `# adduser NEW_USER` **Create A New User.**
-- `# gpasswd -a NEW_USER sudo` **Add Root Privileges.** Add the user to the sudo group.
-- `local$ ssh-copy-id NEW_USER@SERVER_IP_ADDRESS` **(Optional) Add Public Key Authentication.** Install ssh-copy-id if necessary.
--
+2. **Create A New User**  
+`# adduser NEW_USER`
+3. **Add Root Privileges**  
+Add the user to the sudo group.  
+`# gpasswd -a NEW_USER sudo`
+4. **(Optional) Add Public Key Authentication.**  
+Install ssh-copy-id if necessary.  
+`local$ ssh-copy-id NEW_USER@SERVER_IP_ADDRESS`
+5. 
 
 
 
