@@ -171,7 +171,20 @@ $ sudo forever stopall
 ```
 
 ### Domain Name Service Setup
-TODO
+##### Change The DNS
+Change the "Domain Name Server" fields to include:
+**ns1.digitalocean.com**
+**ns2.digitalocean.com**
+**ns3.digitalocean.com**
+
+##### Configure Droplet Domain
+Navigate to Domains on Digital Ocean and add the droplet to your domain name.
+The following fields are of interest:
+- *A* IPv4 Address - Put @ and the IPv4 Address of the droplet
+- *AAAA* IPv6 Address - Put @ and the IPv6 Address of the droplet only if it has an IPv6 Address.
+- *CNAME* Subdomain Alias - Put \* and @. This field has the subdomain (name) field act as an alias of the Hostname. Here, \* acts as a wildcard.
+
+Note: \* acts as a wildcard and @ is an alias to the domain name with nothing before it.
 
 ## Troubleshoot Issues
 This section details issues that may be encountered.
