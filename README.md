@@ -24,16 +24,23 @@ This section details the process in setting up the server.
 Before beginning, deploy an Ubuntu droplet with NodeJS pre-installed.
 ##### Login As Root
 Using the password from the e-mail.  
-`# ssh root@SERVER_IP_ADDRESS`  
-2. **Create A New User**  
-`# adduser NEW_USER`  
-3. **Add Root Privileges**  
+```
+# ssh root@SERVER_IP_ADDRESS
+```  
+##### Create A New User
+```
+# adduser NEW_USER
+```
+##### Add Root Privileges
 Add the user to the sudo group.  
 `# gpasswd -a NEW_USER sudo`  
-4. **(Optional) Add Public Key Authentication.**  
+##### (Optional) Add Public Key Authentication.
 Install ssh-copy-id if necessary.  
 `local$ ssh-copy-id NEW_USER@SERVER_IP_ADDRESS`  
-5. ss
+##### Configure SSH Daemon
+Open the configuration file located here  
+`/etc/ssh/sshd_config`  
+
 
 
 
