@@ -119,28 +119,21 @@ Open the configuration file:
 ```
 $ sudo vim /etc/vsftpd.conf
 ```
-Then change the following
+Copy and paste the following as the entire file
 ```
-anonymous_enable=NO   // Previously anonymous_enable=YES
-```
-We also want to change a couple other default configurations
-```
-// Uncomment the following
+listen=YES
+anonymous_enable=NO
+anon_root=/home/user
 local_enable=YES
-...
 write_enable=YES
-...
-chroot_local_user=YES
-```
-
-##### Create a Directory For FTP Usage
-Create a new directory in the home directory
-```
-$ mkdir ~/files
-```
-Change the ownership of that file to root
-```
-$ sudo chown root:root ~/files
+local_umask=022
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
 ```
 
 ##### Reload vsftpd
@@ -148,9 +141,27 @@ $ sudo chown root:root ~/files
 $ sudo service vsftpd restart
 ```
 
-### Accessing FTP
-Before beginning, install **FileZilla**.
+Access the FTP service using FileZilla or the command line.
 
+### Migrate Large Files with FTP
+The following need to be migrated. The list may be incomplete, so update it
+if there is an item that is missing or no longer needed.
+- PROJDIR/app/video/
+
+### Deploying the Server
+##### Install forever
+```
+$ npm install -g forever
+```
+##### Boot Up the Server!
+To deploy the server, run the following in the project directory:
+```
+$ forever start server.js
+```
+To stop the server, run:
+```
+$ forever stopall
+```
 
 ### Domain Name Service Setup
 TODO
