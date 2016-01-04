@@ -29,7 +29,12 @@ Then follow these instructions in bash:
 - Login as root. Use the password from the e-mail.
 `# ssh root@SERVER_IP_ADDRESS`
 - Create a new user.
-`# add`
+`# adduser NEW_USER`
+- Add the new user to the sudo group for root privileges
+`# gpasswd -a NEW_USER sudo`
+- (Optional) Add Public Key Authentication
+  - Generate a Key Pair (Skip if you already have one).
+`local$ ssh-keygen`
 
 
 
