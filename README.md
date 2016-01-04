@@ -1,44 +1,43 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Dunhuang Caves](#dunhuang-caves)
-  - [Developing Locally](#developing-locally)
-    - [Required Software](#required-software)
-    - [Testing Locally](#testing-locally)
-  - [Server Setup](#server-setup)
-    - [Droplet Configuration Instructions](#droplet-configuration-instructions)
-        - [Login As Root](#login-as-root)
-        - [Create A New User](#create-a-new-user)
-        - [Add Root Privileges](#add-root-privileges)
-        - [(Optional) Add Public Key Authentication.](#optional-add-public-key-authentication)
-        - [Configure SSH Daemon](#configure-ssh-daemon)
-        - [Reload SSH](#reload-ssh)
-    - [Obtaining the Project](#obtaining-the-project)
-        - [Add The Droplet's SSH Key To Git](#add-the-droplets-ssh-key-to-git)
-        - [Cloning the Project](#cloning-the-project)
-        - [Install Node Modules](#install-node-modules)
-    - [Setting Up FTP](#setting-up-ftp)
-        - [Install A FTP Service](#install-a-ftp-service)
-        - [Configure vsftpd](#configure-vsftpd)
-        - [Reload vsftpd](#reload-vsftpd)
-    - [Migrate Large Files with FTP](#migrate-large-files-with-ftp)
-    - [Deploying the Server](#deploying-the-server)
-        - [Install forever](#install-forever)
-        - [Boot Up the Server!](#boot-up-the-server)
-    - [Domain Name Service Setup](#domain-name-service-setup)
-        - [Change The DNS](#change-the-dns)
-        - [Configure Droplet Domain](#configure-droplet-domain)
-  - [Troubleshoot Issues](#troubleshoot-issues)
-    - [Broken Videos - FTP Solution](#broken-videos---ftp-solution)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Dunhuang Caves
 This website encompasses all the work done on the caves.
 
 It's main purpose is to showcase our work to the outside world, including
 Harvard and the Dunhuang Research Academy.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Developing Locally](#developing-locally)
+  - [Required Software](#required-software)
+  - [Testing Locally](#testing-locally)
+- [Server Setup](#server-setup)
+  - [Droplet Configuration Instructions](#droplet-configuration-instructions)
+      - [Login As Root](#login-as-root)
+      - [Create A New User](#create-a-new-user)
+      - [Add Root Privileges](#add-root-privileges)
+      - [(Optional) Add Public Key Authentication.](#optional-add-public-key-authentication)
+      - [Configure SSH Daemon](#configure-ssh-daemon)
+      - [Reload SSH](#reload-ssh)
+  - [Obtaining the Project](#obtaining-the-project)
+      - [Add The Droplet's SSH Key To Git](#add-the-droplets-ssh-key-to-git)
+      - [Cloning the Project](#cloning-the-project)
+      - [Install Node Modules](#install-node-modules)
+  - [Setting Up FTP](#setting-up-ftp)
+      - [Install A FTP Service](#install-a-ftp-service)
+      - [Configure vsftpd](#configure-vsftpd)
+      - [Reload vsftpd](#reload-vsftpd)
+  - [Migrate Large Files with FTP](#migrate-large-files-with-ftp)
+  - [Deploying the Server](#deploying-the-server)
+      - [Install forever](#install-forever)
+      - [Boot Up the Server!](#boot-up-the-server)
+  - [Domain Name Service Setup](#domain-name-service-setup)
+      - [Change The DNS](#change-the-dns)
+      - [Configure Droplet Domain](#configure-droplet-domain)
+- [Troubleshoot Issues](#troubleshoot-issues)
+  - [Broken Videos - FTP Solution](#broken-videos---ftp-solution)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Developing Locally
 The project may be cloned at [git@github.com:gruan/MogaoCaves.git](git@github.com:gruan/MogaoCaves.git)
